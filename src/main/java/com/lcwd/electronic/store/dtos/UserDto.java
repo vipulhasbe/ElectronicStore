@@ -1,5 +1,6 @@
 package com.lcwd.electronic.store.dtos;
 
+import com.lcwd.electronic.store.validate.ImageNameValid;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedEntityGraph;
@@ -28,5 +29,6 @@ public class UserDto {
     private String gender;
     @NotBlank(message = "Please specify something about yourself")
     private String about;
+    @ImageNameValid
     private  String imageName;
 }
